@@ -10,10 +10,15 @@ ZMK board module for the PocketDeck keyboard (nRF52840).
 
 ## Build
 
-From the `app` directory of your ZMK checkout:
+```
+source ~/dev/env/zmk.sh
+zmk_build pocketdeck - ~/dev/keyboards/zmk/zmk-keyboards-pocketdeck
+```
+
+or with plain west, from the `app` directory of your ZMK checkout (`$ZMK_APP`):
 
 ```
-west build -p always -d /tmp/pocketdeck-zmk-build -b pocketdeck -- -DZMK_EXTRA_MODULES="$HOME/dev/firmware/keyboards-firmware/pocketdeck"
+west build -p always -d /tmp/pocketdeck-zmk-build -b pocketdeck -- -DZMK_EXTRA_MODULES="$HOME/dev/keyboards/zmk/zmk-keyboards-pocketdeck"
 ```
 
 ## Notes
